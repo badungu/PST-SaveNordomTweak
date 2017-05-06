@@ -1,5 +1,5 @@
 BACKUP ~PST-SaveNordomTweak/backup~
-AUTHOR ~me~
+AUTHOR ~badungu/Original Author: Qwinn~
 
 ALWAYS
 	INCLUDE ~PST-SaveNordomTweak/lib/handle_charsets.tpa~ //the current version of HANDLE_CHARSETS inside of weidu doesn't support PST:EE
