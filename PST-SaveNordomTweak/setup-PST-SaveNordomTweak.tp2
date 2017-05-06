@@ -1,0 +1,48 @@
+BACKUP ~PST-SaveNordomTweak/backup~
+AUTHOR ~me~
+
+ALWAYS
+	INCLUDE ~PST-SaveNordomTweak/lib/handle_charsets.tpa~ //the current version of HANDLE_CHARSETS inside of weidu doesn't support PST:EE
+	LAF ~HANDLE_CHARSETS~
+      INT_VAR
+      infer_charsets = 1	
+      STR_VAR
+      tra_path = "PST-SaveNordomTweak/tra"
+    END
+	
+	ACTION_IF GAME_IS ~pstee~ BEGIN
+		OUTER_SPRINT ~QuoteQuoteComma~ ~"",~
+	END ELSE ACTION_IF GAME_IS ~pst~ BEGIN
+		OUTER_SPRINT ~QuoteQuoteComma~ ~~
+	END
+
+END
+
+AUTO_TRA "PST-SaveNordomTweak/tra/%s" //%"
+
+LANGUAGE
+  ~English~  ~english~             ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/english/setup.tra~
+LANGUAGE
+  ~German~   ~german~              ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/german/setup.tra~
+LANGUAGE
+  ~Spanish~  ~spanish~             ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/spanish/setup.tra~
+LANGUAGE
+  ~Italian~  ~italian~             ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/italian/setup.tra~
+LANGUAGE
+  ~Polish~   ~polish~              ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/polish/setup.tra~
+LANGUAGE
+  ~Russian~  ~russian~             ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/russian/setup.tra~
+LANGUAGE
+  ~French~  ~french~               ~PST-SaveNordomTweak/tra/english/setup.tra~
+                                   ~PST-SaveNordomTweak/tra/french/setup.tra~ 
+
+BEGIN @12
+REQUIRE_PREDICATE GAME_IS ~pst pstee~ @200
+
+COMPILE ~PST-SaveNordomTweak/SaveNordom.d~ EVAL
