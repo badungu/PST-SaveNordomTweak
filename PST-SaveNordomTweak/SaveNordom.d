@@ -39,6 +39,6 @@ APPEND DNORDOM
 
  IF ~~ THEN BEGIN NEWNORDOM-8
     SAY @14 /* ~Nordom *kliks* and *whirrs*, his left eye shutter dropping closed. "Commencing anticipating return of Creative Director and reattachment to larger community with much anticipations!" He accepts the cube from you, and adjusts the small figure's appendages in a fashion you don't recognize, raises his gaze back to you, warbles briefly, then says: "Formulating new Status: Commencing: Hopes for Creative Director's success and safe return. Formulating new Statement: Fare Well." Nordom then blinks out of existence.~ */
-    IF ~~ THEN REPLY @15 /* ~"Alright. Welcome aboard again, Vhailor. Let's get going."~ */ DO ~DropInventory() TakePartyItem("cube") LeaveAreaLUA("AR13FY",%QuoteQuoteComma%[610.657],6)~ EXIT
+    IF ~~ THEN REPLY @15 /* ~"Alright. Welcome aboard again, Vhailor. Let's get going."~ */ DO ~DropInventory() LeaveAreaLUA("AR13FY",%QuoteQuoteComma%[610.657],6)~ EXIT
  END
 END
